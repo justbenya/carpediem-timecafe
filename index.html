@@ -6,10 +6,22 @@
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/lightslider.css" />
+    <script src="js/lightslider.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#content-slider").lightSlider({
+          auto:true,
+          loop:true,
+          autoWidth:true,
+          keyPress:true
+       });
+      });
+   </script>
   </head>
   <body>
 
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Верхнее навигационное меню -->
     <header class="mainHeader">
       <!-- Обертка-центровщик -->
@@ -31,6 +43,9 @@
       </div>
     </header>
 
+    <section class="top-page">
+
+    </section>
     <div class="container">
       <figure class="logo">
 				<img src="img/logo.png" width="340" height="278" alt="Logo">
@@ -57,16 +72,24 @@
 				</div>
       </section>
 
-      <div class="content clearfix">
-        <h1>ДОБРО ПОЖАЛОВАТЬ В CARPE DIEM</h1>
-        <div class="leftColumn">
-          <img src="img/antikafe.png" alt="Антикафе">
-        </div>
-        <div class="rightColumn">
-          <p>ЭТО МЕСТО НАМНОГО БОЛЬШЕ ЧЕМ ПРОСТО КОФЕЙНЯ ПО ИНТЕРЕСАМ, ЭТО ИМЕННО ТО МЕСТО, ГДЕ ТЫ НАЙДЕШЬ СЕБЯ И НОВЫХ ДРУЗЕЙ. ПОВЕРЬ НАМ НА СЛОВО. ПОЙ И ТАНЦУЙ ИЛИ ПРОСТО СОЗЕРЦАЙ, РАБОТАЙ, УЧИСЬ ИЛИ ОТДЫХАЙ. ЭТО БОЛЬШАЯ СВЕТЛАЯ КВАРТИРА В НЕСКОЛЬКО КОМНАТ, В КОТОРОЙ МОЖНО ДЕЛАТЬ ЧТО УГОДНО, ЕСЛИ ЭТО НЕ МЕШАЕТ ОКРУЖАЮЩИМ. ЛОВИ МОМЕНТ СЕЙЧАС!</p>
-          <a href="#" class="button">УЗНАТЬ ПОДРОБНЕЕ</a>
-        </div>
-      </div>
+     <div class="wellcome">
+       <div class="content clearfix">
+         <h1>ДОБРО ПОЖАЛОВАТЬ В CARPE DIEM</h1>
+         <div class="item">
+           <ul id="content-slider" class="content-slider">
+             <li><img src="img/cS-1.jpg"></li>
+             <li><img src="img/cS-2.jpg"></li>
+             <li><img src="img/cS-3.jpg"></li>
+             <li><img src="img/cS-4.jpg"></li>
+             <li><img src="img/cS-5.jpg"></li>
+             <li><img src="img/cS-6.jpg"></li>
+           </ul>
+         </div>
+         <p>ЭТО МЕСТО НАМНОГО БОЛЬШЕ ЧЕМ ПРОСТО КОФЕЙНЯ ПО ИНТЕРЕСАМ, ЭТО ИМЕННО ТО МЕСТО, ГДЕ ТЫ НАЙДЕШЬ СЕБЯ И НОВЫХ ДРУЗЕЙ. ПОВЕРЬ НАМ НА СЛОВО. ПОЙ И ТАНЦУЙ ИЛИ ПРОСТО СОЗЕРЦАЙ, РАБОТАЙ, УЧИСЬ ИЛИ ОТДЫХАЙ. ЭТО БОЛЬШАЯ СВЕТЛАЯ КВАРТИРА В НЕСКОЛЬКО КОМНАТ, В КОТОРОЙ МОЖНО ДЕЛАТЬ ЧТО УГОДНО, ЕСЛИ ЭТО НЕ МЕШАЕТ ОКРУЖАЮЩИМ. ЛОВИ МОМЕНТ СЕЙЧАС!</p>
+         <a href="#" class="button">УЗНАТЬ ПОДРОБНЕЕ</a>
+       </div>
+     </div>
+
 
       <div class="content clearfix">
         <h1>Мы предлагаем</h1>
@@ -106,19 +129,39 @@
 
       <div class="content clearfix">
         <h1>Прайс-лист</h1>
-        <section class="leftColumn">
-          <img src="img/card.png" alt="">
-        </section>
-        <section class="rightColumn">
-          <p>
-            ПЕРВЫЙ ЧАС С ЧЕЛОВЕКА 							150
-            ВТОРОЙ ЧАС И ДАЛЬШЕ 							 2
-            СТОП-ЧЕК										 390
-            АБОНЕМЕНТ НА 5 СТОП-ЧЕКОВ						 2 000
-            ИГРОВАЯ НА ВЕСЬ ДЕНЬ							 2 000
-            КИНОРУМ	 НА ВЕСЬ ДЕНЬ							 1 000
-            АБОНЕМЕНТ 									 4000
-          </p>
+        <section class="table">
+          <table>
+            <tbody>
+              <tr>
+                <td>ПЕРВЫЙ ЧАС С ЧЕЛОВЕКА</td>
+                <td>150</td>
+              </tr>
+              <tr>
+                <td>ВТОРОЙ ЧАС И ДАЛЬШЕ</td>
+                <td>200</td>
+              </tr>
+              <tr>
+                <td>СТОП-ЧЕК</td>
+                <td>390</td>
+              </tr>
+              <tr>
+                <td>АБОНЕМЕНТ НА 5 СТОП-ЧЕКОВ</td>
+                <td>2 000</td>
+              </tr>
+              <tr>
+                <td>ИГРОВАЯ НА ВЕСЬ ДЕНЬ</td>
+                <td>2 000</td>
+              </tr>
+              <tr>
+                <td>КИНОРУМ	 НА ВЕСЬ ДЕНЬ</td>
+                <td>1 000</td>
+              </tr>
+              <tr>
+                <td>АБОНЕМЕНТ</td>
+                <td>4 000</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
         <div class="button">Доп. услуги</div>
       </div>

@@ -127,6 +127,7 @@ body {
   line-height: 42px;
   text-align: center;
 }
+
 .leftColumn {
   float: left;
   width: 370px;
@@ -158,6 +159,10 @@ body {
   background: #917658;
 }
 
+.wellcome .button {
+  float: right;
+}
+
 .imgContainer {
   float: left;
   padding-left: 20px;
@@ -169,6 +174,25 @@ body {
   padding-bottom: 20px;
   font-size: 18px;
 }
+
+/*price block*/
+.table {
+
+  text-align: center;
+
+
+}
+
+.table tr td:first-child {
+    text-align: left;
+    color: #4a4a4a;
+}
+
+.table tr td {
+    padding: 7px 0;
+    color: #d5a353;
+}
+
 
 /*feedback form*/
 .feedbackForm input {
