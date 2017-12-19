@@ -156,7 +156,7 @@ body {
   cursor: pointer;
 }
 .button:hover, .button:active {
-  background: #917658;
+  background: #d5a353;
 }
 
 .wellcome .button {
@@ -176,24 +176,44 @@ body {
 }
 
 /*price block*/
+.price {
+  clear: both;
+  margin: 0 auto;
+}
+
 .table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  margin-left: 220px;
+}
 
-  text-align: center;
-
-
+.table tr {
+  text-transform: uppercase;
+  border-bottom: 2px dashed black;
+  border-top: none;
 }
 
 .table tr td:first-child {
-    text-align: left;
-    color: #4a4a4a;
+  text-align: left;
+  padding-right: 100px;
+  color: black;
+  font-size: 18px
 }
 
 .table tr td {
-    padding: 7px 0;
-    color: #d5a353;
+  padding-top: 7px;
+  padding-right: 0px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  color: #d5a353;
+  text-align: right;
 }
 
-
+.price .button {
+  float: left;
+  margin-left: 350px;
+  margin-top: 20px;
+}
 /*feedback form*/
 .feedbackForm input {
   float: left;
