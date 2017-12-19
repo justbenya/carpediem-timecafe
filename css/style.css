@@ -163,6 +163,7 @@ body {
   float: right;
 }
 
+/*offer*/
 .imgContainer {
   float: left;
   padding-left: 20px;
@@ -175,6 +176,9 @@ body {
   font-size: 18px;
 }
 
+.offer .content {
+  padding-bottom: 0;
+}
 /*price block*/
 .price {
   clear: both;
@@ -233,7 +237,6 @@ body {
 
 .feedbackForm input:nth-child(3) {
   width: 315px;
-  /*height: 150px;*/
 }
 
 .feedbackForm input:focus {
@@ -242,7 +245,7 @@ body {
 
 .feedbackForm .button {
   clear: both;
-  width: 100%;
+  width: 95%;
 }
 
 /*footer*/
@@ -263,6 +266,7 @@ body {
 
 .footerCopyright .button {
   margin: 0;
+  margin-top: -10px;
 }
 
 .top {
