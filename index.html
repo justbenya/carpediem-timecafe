@@ -10,15 +10,18 @@
   </head>
   <body>
 
+    <!-- Header -->
     <header class="page-header">
       <h1 class="visual-hide">Анти кафе "Carpe Diem" - наслаждайся каждым днем!</h1>
 
+      <!-- Logo -->
       <div class="page-header__logo">
         <img src="img/logo-mobile.png" width="315" height="110" alt="Анти кафе CARPE DIEM">
       </div>
+
+      <!-- Navigation -->
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
         <button class="main-navigation__toggle" type="button">Открыть меню</button>
-
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__items">
             <li class="main-navigation__item  main-navigation__item--active"><a href="index.html">Главная</a></li>
@@ -27,14 +30,16 @@
             <li class="main-navigation__item"><a href="about.html">О нас</a></li>
           </ul>
 
-          <ul class="main-navigation__user-items  main-navigation__social-links">
-            <li class="main-navigation__user-item"><a class="main-navigation__social-link  main-navigation__social-link--vk" href="#">Vk</a></li>
-            <li class="main-navigation__user-item"><a class="main-navigation__social-link  main-navigation__social-link--fb" href="#">Fb</a></li>
-            <li class="main-navigation__user-item"><a class="main-navigation__social-link  main-navigation__social-link--inst" href="#">In</a></li>
+          <ul class="main-navigation__links">
+            <li class="main-navigation__link  main-navigation__link--vk"><a href="#">Vk</a></li>
+            <li class="main-navigation__link  main-navigation__link--fb"><a href="#">Fb</a></li>
+            <li class="main-navigation__link  main-navigation__link--inst"><a href="#">In</a></li>
           </ul>
         </div>
       </nav>
     </header>
+
+    <!-- Script for navigation -->
     <script>
       var navigation = document.querySelector(".main-navigation");
       var toggle = document.querySelector(".main-navigation__toggle");
@@ -50,6 +55,74 @@
         }
       });
     </script>
+
+    <!-- Information -->
+    <section class="information  information--closed  information--nojs">
+      <div class="information_wrapper slider">
+        <h2 class="visual-hide">Как нас найти</h2>
+
+        <div class="information__items">
+          <div class="information__item  information__item--visible">
+            <img class="information__image" src="img/svg/adress.svg" width="120" height="120">
+            <h3 class="information__item-title">Адрес</h3>
+            <p>УЛ. ПУШКИНА, 13 <br> МЕТРО: ПЛ. ЛЕНИНА</p>
+          </div>
+
+          <div class="information__item">
+            <img class="information__image" src="img/svg/telefon.svg" width="120" height="120">
+            <h3 class="information__item-title">Звони</h3>
+            <p>+7 (383) 555-13-47</p>
+          </div>
+
+          <div class="information__item">
+            <img class="information__image" src="img/svg/time.svg" width="120" height="120">
+            <h3 class="information__item-title">Работаем</h3>
+            <p>ПН - ПТ: 10:00 - 21:00 <br> СБ - ВС: 10:00 - 23:00</p>
+          </div>
+        </div>
+
+        <div class="information__dots">
+          <span class="information__dot  information__dot--active" onclick="showSlide(0)"></span>
+          <span class="information__dot" onclick="showSlide(1)"></span>
+          <span class="information__dot" onclick="showSlide(2)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script for information-slider -->
+    <script>
+      var information = document.querySelector(".information");
+      information.classList.remove("information--nojs");
+
+      function showSlide(slideIndex) {
+      	var slides = document.getElementsByClassName("information__item");
+      	var dots = document.getElementsByClassName("information__dot");
+
+      	if (slideIndex > slides.length || slideIndex < 0) {
+      		slideIndex = 0;
+      	}
+
+      	for (var i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("information__item--visible");
+          slides[i].classList.add("information__item--unvisible");
+      	}
+
+      	for (var i = 0; i < dots.length; i++){
+          dots[i].classList.remove("information__dot--active");
+      	}
+
+        slides[slideIndex].classList.add("information__item--visible");
+        slides[slideIndex].classList.remove("information__item--unvisible");
+        dots[slideIndex].classList.add("information__dot--active");
+      }
+    </script>
+
+    <section class="wellcome">
+      <div class="wellcome__wrapper">
+        <h2 class="wellcome_title">Добро пожаловать в carpe diem</h2>
+        <p></p>
+      </div>
+    </section>
 
   </body>
 </html>
