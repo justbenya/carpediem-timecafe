@@ -117,10 +117,136 @@
       }
     </script>
 
+    <!-- Wellcome -->
     <section class="wellcome">
       <div class="wellcome__wrapper">
-        <h2 class="wellcome_title">Добро пожаловать в carpe diem</h2>
-        <p></p>
+        <h2 class="wellcome__title">Добро пожаловать в carpe diem</h2>
+        <div class="wellcome__items">
+          <div class="wellcome__gallery">
+            <div class="slidershow-container">
+              <div class="mySlides fade">
+                <img src="img/cS-1.jpg">
+              </div>
+              <div class="mySlides fade">
+                <img src="img/cS-2.jpg">
+              </div>
+              <div class="mySlides fade">
+                <img src="img/cS-3.jpg">
+              </div>
+              <div class="mySlides fade">
+                <img src="img/cS-4.jpg">
+              </div>
+              <div class="mySlides fade">
+                <img src="img/cS-5.jpg">
+              </div>
+              <div class="mySlides fade">
+                <img src="img/antikafe.png">
+              </div>
+            </div>
+            <br>
+            <div style="text-align:center;">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+              <span class="dot" onclick="currentSlide(5)"></span>
+              <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+          </div>
+          <div class="wellcome__text">
+            <p>Это место намного больше чем просто кофейня по интересам,
+              это именно то место, где ты найдешь себя и новых друзей.
+              Поверь нам на слово. Пой и танцуй или просто созерцай,
+              работай, учись или отдыхай. Это большая светлая квартира
+              в несколько комнат, в которой можно делать что угодно,
+              если это не мешает окружающим. Лови момент сейчас!</p>
+          </div>
+          <a class="wellcome__view-more btn-secondary" href="#">Узнать подробнее</a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+
+      if(n > slides.length) {
+        slideIndex = 1;
+      }
+
+      if(n < 1){
+        slideIndex = slides.length;
+      }
+
+      for(var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for(var i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace("active","");
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className+= " active";
+      }
+    </script>
+
+    <section class="offer">
+      <div class="offer__wrapper">
+        <h2 class="offer__title">Мы предлагаем</h2>
+        <div class="offer__items">
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>150 НАСТОЛЬНЫХ ИГР, ВКЛЮЧАЯ САМЫЕ ПОПУЛЯРНЫЕ</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>МНОГО МЯГКИХ ДИВАНОВ, В КОТОРЫХ ЧУВСТВУЕШЬ СЕБЯ КАК ДОМА</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>ВКУСНЫЙ КОФЕ, ПРИГОТОВЛЕННЫЙ В КОФЕМАШИНЕ</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>ВОЗМОЖНОСТЬ ПОИГРАТЬ ЗА АВТОМАТИЧЕСКИМ СТОЛОМ В МАДЖОНГ</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>БОЛЬШОЕ КОЛИЧЕСТВО СНЕКОВ - ПЕЧЕНЬКИ, СУШКИ, СУХАРИКИ, ТОСТЫ И ДЖЕМЫ</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>РАДУШНЫЕ, ПРИВЕТЛИВЫЕ И ОТЗЫВЧИВЫЕ АДМИНИСТРАТОРЫ</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>ДРУЖЕСКАЯ, ТЕПЛАЯ И УЮТНАЯ АТМОСФЕРА</p>
+          </div>
+          <div class="offer__item">
+            <img src="img/imgTest.png" alt="">
+            <p>ДЛЯ ВСЕХ ГОСТЕЙ У НАС БЕСПЛАТНЫЙ WI-FI</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="price">
+      <div class="price__wrapper">
+        <h2 class="price__title">Прайс лист</h2>
+        
       </div>
     </section>
 
