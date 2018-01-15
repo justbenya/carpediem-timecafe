@@ -68,7 +68,7 @@
 }
 
 .btn-secondary:hover, .button:active {
-  background: #d5a353;
+  background: @color-gold;
 }
 
 @media @tablet-width {
@@ -83,11 +83,6 @@
     display: inline-block;
     margin-left: 75%;
     margin-right: 0;
-  }
-
-//TODO ВСЕ ЧТО ВНИЗУ НУЖНО РЕФАКТОРИТЬ!
-  .wellcome__gallery {
-
   }
 
   .slideshow-container{
@@ -148,10 +143,7 @@
 	animation-name:fade;
 	animation-duration:1s;
 }
-  /*@-webkit-keyframes fade{
-  	0%{opacity:0.4;}
-  	100%{opacity:1;}
-  }*/
+
   @keyframes fade{
   	0%{opacity:0.4;}
   	100%{opacity:1;}

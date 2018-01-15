@@ -39,23 +39,6 @@
       </nav>
     </header>
 
-    <!-- Script for navigation -->
-    <script>
-      var navigation = document.querySelector(".main-navigation");
-      var toggle = document.querySelector(".main-navigation__toggle");
-      navigation.classList.remove("main-navigation--nojs");
-
-      toggle.addEventListener("click", function() {
-        if (navigation.classList.contains("main-navigation--closed")) {
-          navigation.classList.remove("main-navigation--closed");
-          navigation.classList.add("main-navigation--opened");
-        } else {
-          navigation.classList.add("main-navigation--closed");
-          navigation.classList.remove("main-navigation--opened");
-        }
-      });
-    </script>
-
     <!-- Information -->
     <section class="information  information--closed  information--nojs">
       <div class="information_wrapper slider">
@@ -88,34 +71,6 @@
         </div>
       </div>
     </section>
-
-    <!-- Script for information-slider -->
-    <script>
-      var information = document.querySelector(".information");
-      information.classList.remove("information--nojs");
-
-      function showSlide(slideIndex) {
-      	var slides = document.getElementsByClassName("information__item");
-      	var dots = document.getElementsByClassName("information__dot");
-
-      	if (slideIndex > slides.length || slideIndex < 0) {
-      		slideIndex = 0;
-      	}
-
-      	for (var i = 0; i < slides.length; i++) {
-          slides[i].classList.remove("information__item--visible");
-          slides[i].classList.add("information__item--unvisible");
-      	}
-
-      	for (var i = 0; i < dots.length; i++){
-          dots[i].classList.remove("information__dot--active");
-      	}
-
-        slides[slideIndex].classList.add("information__item--visible");
-        slides[slideIndex].classList.remove("information__item--unvisible");
-        dots[slideIndex].classList.add("information__dot--active");
-      }
-    </script>
 
     <!-- Wellcome -->
     <section class="wellcome">
@@ -166,43 +121,7 @@
       </div>
     </section>
 
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-
-      function plusSlides(n) {
-      showSlides(slideIndex += n);
-      }
-
-      function currentSlide(n) {
-      showSlides(slideIndex = n);
-      }
-
-      function showSlides(n) {
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-
-      if(n > slides.length) {
-        slideIndex = 1;
-      }
-
-      if(n < 1){
-        slideIndex = slides.length;
-      }
-
-      for(var i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      for(var i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace("active","");
-      }
-
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className+= " active";
-      }
-    </script>
-
+    <!-- Offer -->
     <section class="offer">
       <div class="offer__wrapper">
         <h2 class="offer__title">Мы предлагаем</h2>
@@ -243,12 +162,100 @@
       </div>
     </section>
 
+    <!-- Price -->
     <section class="price">
       <div class="price__wrapper">
-        <h2 class="price__title">Прайс лист</h2>
-        
+        <h2 class="price__title">Прайс-лист</h2>
+        <table class="price__table">
+          <tr>
+            <td class="col-1">1</td>
+            <td class="col-2">ПЕРВЫЙ ЧАС С ЧЕЛОВЕКА</td>
+            <td class="col-3">150 руб.</td>
+          </tr>
+          <tr>
+            <td class="col-1">2</td>
+            <td class="col-2">ВТОРОЙ ЧАС И ДАЛЬШЕ</td>
+            <td class="col-3">200 руб.</td>
+          </tr>
+          <tr>
+            <td class="col-1">3</td>
+            <td class="col-2">СТОП-ЧЕК</td>
+            <td class="col-3">390 руб.</td>
+          </tr>
+          <tr>
+            <td class="col-1">4</td>
+            <td class="col-2">АБОНЕМЕНТ НА 5 СТОП-ЧЕКОВ</td>
+            <td class="col-3">2 000 руб.</td>
+          </tr>
+          <tr>
+            <td class="col-1">5</td>
+            <td class="col-2">ИГРОВАЯ НА ВЕСЬ ДЕНЬ</td>
+            <td class="col-3">2 000 руб.</td>
+          </tr>
+          <tr>
+            <td class="col-1">6</td>
+            <td class="col-2">КИНОРУМ	 НА ВЕСЬ ДЕНЬ</td>
+            <td class="col-3">1 000 руб.</td>
+          </tr>
+          <tr>
+            <td class="col-1">7</td>
+            <td class="col-2">АБОНЕМЕНТ</td>
+            <td class="col-3">4 000 руб.</td>
+          </tr>
+        </table>
+        <a class="price__service btn-secondary" href="#">Доп. услуги</a>
       </div>
     </section>
 
+    <!-- Contacts -->
+    <section class="contacts-question">
+      <div class="contacts-question__wrapper">
+        <div class="contacts-question__column-left">
+          <h2 class="contacts-question__title">Контактная информация</h2>
+          <p>TIME CAFE «CARPE DIEM»<br>АДРЕС: Г.НОВОСИБИРСК, УЛ. ПУШКИНА, Д. 13<br>ТЕЛЕФОН: +7 (383) 555-13-47<br></p>
+          <p>ВРЕМЯ РАБОТЫ: <br>ПОНЕДЕЛЬНИК - ПЯТНИЦА: С 10:00 ДО 21:00 <br>СУББОТА - ВОСКРЕСЕНЬЕ: С 10:00 ДО 23:00 <br></p>
+        </div>
+        <div class="contacts-question__column-right">
+          <h2 class="contacts-question__title">Есть вопросы? Ответим!</h2>
+          <div class="contacts-question__form">
+            <form action="/echo" method="post">
+              <input type="text" name="name" value="" placeholder="Ваше имя">
+              <input type="text" name="email" value="" placeholder="Электронный адрес">
+              <input class="test" type="text" name="message" value="" placeholder="Напишите нам ваш вопрос">
+              <button type="submit" class="btn-secondary">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <div class="map" id="map-canvas">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.743415427151!2d82.91730121562227!3d55.030188980366276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfe5d1cd0cab03%3A0xeb15c8f597727473!2z0L_Quy4g0JvQtdC90LjQvdCwLCDQndC-0LLQvtGB0LjQsdC40YDRgdC6LCDQndC-0LLQvtGB0LjQsdC40YDRgdC60LDRjyDQvtCx0LsuLCA2MzAwOTk!5e0!3m2!1sru!2sru!4v1515962422483" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__column page-footer__contacts">
+          <p>
+            <b>TIME CAFE «CARPE DIEM»</b><br>
+            Г. НОВОСИБИРСК, УЛ. ПУШКИНА, Д. 13
+          </p>
+          <a class="page-footer__telefon btn-light-style" href="#"><span>ТЕЛЕФОН:</span> +7 (383) 555-13-47</a>
+        </div>
+        <div class="page-footer__column page-footer__copyright">
+          <b>Разработано:</b>
+          <a class="page-footer__copyright-link btn-light-style" href="#" target="_blank">Justbenya</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script for navigation -->
+    <script src="js/navigation.js"></script>
+    <!-- Script for information-slider -->
+    <script src="js/informationSliderForMobile.js"></script>
+    <!-- Script for main-wellcome slider -->
+    <script src="js/mainSlider.js"></script>
   </body>
 </html>
