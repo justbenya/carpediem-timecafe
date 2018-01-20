@@ -5,6 +5,7 @@
     <title>АнтиКафе «Carpe Diem»</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
@@ -16,7 +17,15 @@
 
       <!-- Logo -->
       <div class="page-header__logo">
-        <img src="img/logo-mobile.png" width="315" height="110" alt="Анти кафе CARPE DIEM">
+        <picture>
+          <source media="(min-width:1200px)"
+                  srcset="img/logo.png">
+          <source media="(min-width:768px)"
+                  srcset="img/logo.png">
+          <source media="(max-width:767px)"
+                  srcset="img/logo-mobile.png">
+          <img src="img/logo-mobile.png" width="315" height="110" alt="Анти кафе CARPE DIEM">
+        </picture>
       </div>
 
       <!-- Navigation -->
@@ -24,16 +33,16 @@
         <button class="main-navigation__toggle" type="button">Открыть меню</button>
         <div class="main-navigation__wrapper">
           <ul class="main-navigation__items">
-            <li class="main-navigation__item  main-navigation__item--active"><a href="index.html">Главная</a></li>
+            <li class="main-navigation__item  main-navigation__item--active"><a>Главная</a></li>
             <li class="main-navigation__item"><a href="service.html">Услуги</a></li>
             <li class="main-navigation__item"><a href="contact.html">Контакты</a></li>
             <li class="main-navigation__item"><a href="about.html">О нас</a></li>
           </ul>
 
           <ul class="main-navigation__links">
-            <li class="main-navigation__link  main-navigation__link--vk"><a href="#">Vk</a></li>
-            <li class="main-navigation__link  main-navigation__link--fb"><a href="#">Fb</a></li>
-            <li class="main-navigation__link  main-navigation__link--inst"><a href="#">In</a></li>
+            <li><a class="main-navigation__link  main-navigation__link--vk" href="https://vk.com/" target="_blank">В</a></li>
+            <li><a class="main-navigation__link  main-navigation__link--fb" href="https://ru-ru.facebook.com/" target="_blank">Фейсбук</a></li>
+            <li><a class="main-navigation__link  main-navigation__link--inst" href="https://www.instagram.com/?hl=ru" target="_blank">Инстаграм</a></li>
           </ul>
         </div>
       </nav>
@@ -46,19 +55,19 @@
 
         <div class="information__items">
           <div class="information__item  information__item--visible">
-            <img class="information__image" src="img/svg/adress.svg" width="120" height="120">
+            <img class="information__image" src="img/adress.svg" width="120" height="120">
             <h3 class="information__item-title">Адрес</h3>
             <p>УЛ. ПУШКИНА, 13 <br> МЕТРО: ПЛ. ЛЕНИНА</p>
           </div>
 
           <div class="information__item">
-            <img class="information__image" src="img/svg/telefon.svg" width="120" height="120">
+            <img class="information__image" src="img/telefon.svg" width="120" height="120">
             <h3 class="information__item-title">Звони</h3>
             <p>+7 (383) 555-13-47</p>
           </div>
 
           <div class="information__item">
-            <img class="information__image" src="img/svg/time.svg" width="120" height="120">
+            <img class="information__image" src="img/time.svg" width="120" height="120">
             <h3 class="information__item-title">Работаем</h3>
             <p>ПН - ПТ: 10:00 - 21:00 <br> СБ - ВС: 10:00 - 23:00</p>
           </div>
@@ -80,22 +89,22 @@
           <div class="wellcome__gallery">
             <div class="slidershow-container">
               <div class="mySlides fade">
-                <img src="img/cS-1.jpg">
+                <img src="img/1.jpg">
               </div>
               <div class="mySlides fade">
-                <img src="img/cS-2.jpg">
+                <img src="img/2.jpg">
               </div>
               <div class="mySlides fade">
-                <img src="img/cS-3.jpg">
+                <img src="img/3.jpg">
               </div>
               <div class="mySlides fade">
-                <img src="img/cS-4.jpg">
+                <img src="img/4.jpg">
               </div>
               <div class="mySlides fade">
-                <img src="img/cS-5.jpg">
+                <img src="img/5.jpg">
               </div>
               <div class="mySlides fade">
-                <img src="img/antikafe.png">
+                <img src="img/6.jpg">
               </div>
             </div>
             <br>
@@ -127,35 +136,35 @@
         <h2 class="offer__title">Мы предлагаем</h2>
         <div class="offer__items">
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-1.png" alt="Настольные игры">
             <p>150 НАСТОЛЬНЫХ ИГР, ВКЛЮЧАЯ САМЫЕ ПОПУЛЯРНЫЕ</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-2.png" alt="Мягкие диваны">
             <p>МНОГО МЯГКИХ ДИВАНОВ, В КОТОРЫХ ЧУВСТВУЕШЬ СЕБЯ КАК ДОМА</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-3.png" alt="Вкусный кофе">
             <p>ВКУСНЫЙ КОФЕ, ПРИГОТОВЛЕННЫЙ В КОФЕМАШИНЕ</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-4.png" alt="Маджонг">
             <p>ВОЗМОЖНОСТЬ ПОИГРАТЬ ЗА АВТОМАТИЧЕСКИМ СТОЛОМ В МАДЖОНГ</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-7.png" alt="Приятная атмосфера">
             <p>БОЛЬШОЕ КОЛИЧЕСТВО СНЕКОВ - ПЕЧЕНЬКИ, СУШКИ, СУХАРИКИ, ТОСТЫ И ДЖЕМЫ</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-6.png" alt="Администраторы">
             <p>РАДУШНЫЕ, ПРИВЕТЛИВЫЕ И ОТЗЫВЧИВЫЕ АДМИНИСТРАТОРЫ</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-5.png" alt="Печеньки">
             <p>ДРУЖЕСКАЯ, ТЕПЛАЯ И УЮТНАЯ АТМОСФЕРА</p>
           </div>
           <div class="offer__item">
-            <img src="img/imgTest.png" alt="">
+            <img src="img/2-8.png" alt="WiFi">
             <p>ДЛЯ ВСЕХ ГОСТЕЙ У НАС БЕСПЛАТНЫЙ WI-FI</p>
           </div>
         </div>
