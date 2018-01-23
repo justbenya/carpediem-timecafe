@@ -1,0 +1,69 @@
+.about-cafe {
+  padding-top: 20px;
+  padding-bottom: 40px;
+
+  background-color: @color-bg-darkgrey;
+}
+
+.about-cafe__wrapper {
+  .container-adaptive();
+  padding-right: 6%;
+  padding-left: 6%;
+}
+
+.about-cafe__title {
+  color: @color-white;
+  margin: 0;
+  padding-top: 14px;
+
+  font-size: 30px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about-cafe__items {
+  margin: 0;
+  padding: 0;
+}
+
+.about-cafe__text {
+  margin: 0;
+  padding-top: 30px;
+
+  color: @color-white;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.about-cafe__img {
+  display: none;
+}
+
+@media @tablet-width {
+  .about-cafe__text {
+    text-align: center;
+  }
+
+  .about-cafe__items .about-cafe__text {
+    text-align: left;
+  }
+
+  .about-cafe__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  .about-cafe__item {
+    padding: 20px 0;
+    width: 400px;
+  }
+
+  .about-cafe__img {
+    display: block;
+    margin: 0 auto;
+  }
+
+}
