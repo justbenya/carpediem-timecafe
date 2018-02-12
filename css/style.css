@@ -869,6 +869,9 @@ img {
   .contacts-question__form button {
     width: 96%;
   }
+  .contacts-question__form input {
+    font: inherit;
+  }
 }
 @media (min-width: 1200px) {
   .contacts-question__title {
@@ -1190,7 +1193,7 @@ img {
 }
 .contact {
   padding-top: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 40px;
   background-color: #f8f5f2;
 }
 .contact__wrapper {
