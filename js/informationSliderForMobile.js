@@ -2,8 +2,8 @@ var information = document.querySelector(".information");
 information.classList.remove("information--nojs");
 
 function showSlide(slideIndex) {
-  var slides = document.getElementsByClassName("information__item");
-  var dots = document.getElementsByClassName("information__dot");
+  var slides = document.querySelectorAll(".information__item");
+  var dots = document.querySelectorAll(".information__dot");
 
   if (slideIndex > slides.length || slideIndex < 0) {
     slideIndex = 0;
